@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root{
+    /*Primary*/
+
+    --Violet: #674BAF;
+    --Soft-Magenta: #E882E8;
+
+    --ff-heading: 'Poppins', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 600;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-family: var(--ff-body);
+    font-weight: var(--fw-regular);
+    background: var(--Violet);
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+    color: white;
+}
+.logo_container img{
+ width: 14em;
+}
+
+/* Main (content) start here*/
+
+.content_container{
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    grid-template-columns: 1fr 1fr;
+    margin-top: 5rem;
+}
+.content_container img{
+    display: block;
+}
+.ad_container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem;
+}
+.ad_heading{
+    width: 26rem;
+    font-size: 2.3rem;
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-bold);
+}
+.ad_paragh{
+    font-size: 1.1rem;
+    width: 32rem;
+    line-height: 1.6rem;
+    font-weight: var(--fw-regular);
+}
+.ad_btn{
+    width: 12.5rem;
+    font-size: 1rem;
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-bold);
+    padding: .8rem;
+    border-radius: 50px;
+    border: 0;
+    color: var(--Violet);
+    box-shadow: 0 8px 8px -6px black;
+}
+.ad_btn:hover{
+    cursor: pointer;
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+/*Main (content) end here*/
+
+/*footer start here*/
+.social_links_container{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+.social_links_container a{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 100%;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+.social_links_container a i{
+    font-size: 20px;
+    align-self:center;
+	color: white;
+    margin: 0 auto;
+}
+.social_links_container a:hover, .social_links_container i:hover {
+    cursor: pointer;
+    border-color: var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+.attribution{
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a{
+    color: white;
+}
+/*footer ends here*/
+
+@media (max-width: 600px) {
+    body{
+        background-image: url(images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 43rem 40rem;
+
+    }
+    main{
+        display: grid;
+        grid-template-rows: repeat(1fr);
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+    .content_container img{
+       width: 80%;
+    }
+    .social_links_container{
+       justify-content: center;
+    }
+    .ad_paragh{
+        text-align: center;
+    }
+    .ad_heading, .ad_btn{
+        place-self: center;
+    }
+    footer{
+        width: 40rem;
+    }
+}
