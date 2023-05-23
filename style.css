@@ -34,7 +34,7 @@ body{
 
 /* Main (content) start here*/
 
-.content_container{
+main{
     display: grid;
     grid-template-rows: repeat(1fr);
     grid-template-columns: 1fr 1fr;
@@ -141,5 +141,9 @@ body{
     }
     footer{
         width: 40rem;
+    }
+    .attribution{
+        margin-top: 1rem;
+        place-self: center;
     }
 }
